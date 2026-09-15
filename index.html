@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A basic responsive HTML5 page">
+	<title>Responsive Web Page</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<header>
+		<h1>KCL Software Solutions</h1>
+		<button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<nav id="main-navigation" aria-label="Main navigation">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="home">
+		<section class="hero">
+			<h2>Welcome</h2>
+			<p>Custom software solutions</p>
+		</section>
+
+		<section class="content-grid" id="about">
+			<article class="card">
+				<h2>About Me</h2>
+				<p>Software developer with experience in creating custom solutions for various industries.</p>
+			</article>
+			<article class="card">
+				<h2>Skills</h2>
+				<p>Proficient in Python, JavaScript, and various web technologies.</p>
+			</article>
+			<article class="card">
+				<h2>Projects</h2>
+				<label class="project-filter-label" for="project-category">Filter by category</label>
+				<select id="project-category" class="project-filter">
+					<option value="all">All projects</option>
+					<option value="dashboard">Dashboard</option>
+					<option value="ecommerce">E-commerce</option>
+					<option value="mobile">Mobile</option>
+					<option value="productivity">Productivity</option>
+				</select>
+				<ul class="projects-list">
+					<li data-category="dashboard" data-description="A clear, responsive dashboard for tracking business performance and making informed decisions.">
+						<button class="lightbox-trigger" type="button" aria-label="View Analytics Dashboard image">
+							<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=160&q=80" alt="Analytics dashboard on a laptop">
+						</button>
+						<h3>Analytics Dashboard</h3>
+					</li>
+					<li data-category="ecommerce" data-description="A streamlined online shopping experience with simple browsing, product discovery, and checkout.">
+						<button class="lightbox-trigger" type="button" aria-label="View Online Store image">
+							<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=160&q=80" alt="Online shopping interface on a laptop">
+						</button>
+						<h3>Online Store</h3>
+					</li>
+					<li data-category="mobile" data-description="A focused mobile experience designed to keep essential tools accessible wherever users go.">
+						<button class="lightbox-trigger" type="button" aria-label="View Mobile App image">
+							<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=160&q=80" alt="Mobile application screens">
+						</button>
+						<h3>Mobile App</h3>
+					</li>
+					<li data-category="dashboard" data-description="A reporting workspace that turns complex information into easy-to-read charts and summaries.">
+						<button class="lightbox-trigger" type="button" aria-label="View Reporting Tool image">
+							<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=160&q=80" alt="Charts and reports on a computer screen">
+						</button>
+						<h3>Reporting Tool</h3>
+					</li>
+					<li data-category="productivity" data-description="A collaborative workspace that helps teams organize work, share updates, and stay aligned.">
+						<button class="lightbox-trigger" type="button" aria-label="View Team Workspace image">
+							<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=160&q=80" alt="Team collaborating at a computer">
+						</button>
+						<h3>Team Workspace</h3>
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<section class="contact-section" id="contact">
+			<h2>Contact</h2>
+			<form class="contact-form" action="#" method="post">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" placeholder="Your name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" placeholder="Your email" required>
+				</div>
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+				</div>
+				<button type="submit">Send Message</button>
+			</form>
+		</section>
+	</main>
+
+	<div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-describedby="lightbox-description" hidden>
+		<div class="lightbox-content">
+			<button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+			<img class="lightbox-image" src="" alt="">
+			<h2 id="lightbox-title"></h2>
+			<p id="lightbox-description"></p>
+		</div>
+	</div>
+
+	<footer id="contact-footer">
+		<p>&copy; 2026 KCL Software Solutions</p>
+	</footer>
+</body>
+</html>
